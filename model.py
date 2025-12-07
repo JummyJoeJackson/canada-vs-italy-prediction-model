@@ -28,31 +28,25 @@ def train_model(X, y):
     
     return model, scaler
 
+
 def predict_canada_vs_italy(model, scaler, canada_stats, italy_stats, features):
-    # Create feature vector (Canada home, Italy away)
-    
-    # Get Elo ratings (default to 1500 if missing)
     canada_elo = canada_stats.get('current_elo', 1500)
     italy_elo = italy_stats.get('current_elo', 1500)
     
     feature_data = {
-        # Elo Ratings
         'home_elo': canada_elo,
         'away_elo': italy_elo,
         'elo_diff': canada_elo - italy_elo,
         
-        # Host Advantage (Canada is host in 2026)
         'is_home_host': 1,
         'is_away_host': 0,
         
-        # Home team stats
         'gf_avg_home': canada_stats['gf_avg'],
         'ga_avg_home': canada_stats['ga_avg'], 
         'win_rate_home': canada_stats['win_rate'],
         'gd_avg_home': canada_stats['gd_avg'],
         'gf_per_match_home': canada_stats['gf_per_match'],
         
-        # Away team stats
         'gf_avg_away': italy_stats['gf_avg'],
         'ga_avg_away': italy_stats['ga_avg'],
         'win_rate_away': italy_stats['win_rate'],
@@ -88,13 +82,13 @@ def predict_canada_vs_italy(model, scaler, canada_stats, italy_stats, features):
     
     return prediction, probabilities
 
+
 if __name__ == "__main__":
     print("🏆 World Cup Match Prediction Model - Canada vs Italy")
     print("=" * 60)
 
-    print("📥 Step 1: Loading World Cup data from local 'data-csv' folder...")
+    print("📥 Step 1: Loading World Cup data from 'data-csv' folder...")
     data_dict = data.load_worldcup_data()
-    
     if not data_dict:
         print("❌ No data loaded. Exiting.")
         exit()
