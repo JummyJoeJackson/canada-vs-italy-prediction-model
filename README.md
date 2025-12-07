@@ -88,8 +88,5 @@ Win Probabilities:
 ## 📝 Data Source
 The data used in this project includes historical records of World Cup matches, team appearances, and tournament results.
 
-## 🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 ## 📄 License
 This project is open-source.
