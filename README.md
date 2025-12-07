@@ -1,4 +1,4 @@
-# 🇨🇦 Canada vs Italy Prediction Model 🇮🇹
+# Canada vs Italy Prediction Model
 
 This project is a machine learning implementation designed to predict the outcome of the upcoming World Cup 2026 match between **Canada** and **Italy**.
 
