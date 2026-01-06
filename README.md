@@ -67,7 +67,7 @@ python model.py
 ...
 📈 Model Performance
 Accuracy: 0.585
-Feature Importance (Top 5):
+Feature Importance (Top 3):
   elo_diff: 0.142
   away_elo: 0.115
   home_elo: 0.108
